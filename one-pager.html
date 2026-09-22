@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiggy Autopilot — One-page Product Brief</title>
+    <meta name="description" content="Printable one-page product brief for Swiggy Autopilot." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='17' fill='%23FC8019'/%3E%3Cpath d='M20 20h25L27 44h22' fill='none' stroke='white' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+    <style>
+      :root { --orange:#fc8019; --ink:#17130f; --soft:#655e58; --line:#e7dfd8; --paper:#fffdfb; --green:#16794b; }
+      * { box-sizing:border-box; }
+      body { margin:0; color:var(--ink); background:#ece7e1; font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-size:12px; line-height:1.4; }
+      a { color:inherit; }
+      .toolbar { position:sticky; z-index:5; top:0; display:flex; align-items:center; justify-content:center; gap:10px; padding:12px; background:rgba(236,231,225,.92); backdrop-filter:blur(12px); }
+      .toolbar a,.toolbar button { padding:9px 13px; border:1px solid #d7cec6; border-radius:10px; color:var(--ink); background:white; font:700 12px inherit; text-decoration:none; cursor:pointer; }
+      .toolbar button { color:white; border-color:var(--orange); background:var(--orange); }
+      .sheet { width:min(210mm,calc(100vw - 28px)); min-height:297mm; margin:16px auto 35px; overflow:hidden; background:var(--paper); box-shadow:0 24px 70px rgba(44,33,24,.16); }
+      .top { display:grid; grid-template-columns:1.45fr .55fr; min-height:77mm; color:white; background:var(--ink); }
+      .intro { padding:16mm 13mm 10mm; }
+      .label { color:var(--orange); font-size:8px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+      h1 { margin:5mm 0 3mm; font-size:31px; line-height:.96; letter-spacing:-.055em; }
+      h1 em { color:var(--orange); font-style:normal; }
+      .intro p { max-width:122mm; margin:0; color:rgba(255,255,255,.68); font-size:11px; line-height:1.6; }
+      .thesis { margin-top:7mm; padding:4mm 5mm; border-left:2px solid var(--orange); background:rgba(255,255,255,.05); font-size:10px; }
+      .top-metrics { display:grid; grid-template-rows:repeat(3,1fr); border-left:1px solid rgba(255,255,255,.12); }
+      .metric { display:flex; flex-direction:column; justify-content:center; padding:6mm; border-top:1px solid rgba(255,255,255,.12); }
+      .metric:first-child { border-top:0; }
+      .metric strong { color:var(--orange); font-size:22px; line-height:1; letter-spacing:-.04em; }
+      .metric span { margin-top:2mm; color:rgba(255,255,255,.7); font-size:8px; }
+      .body { padding:8mm 10mm 7mm; }
+      .row { display:grid; grid-template-columns:1fr 1fr; gap:6mm; margin-top:6mm; }
+      .row:first-child { margin-top:0; }
+      .section { min-width:0; }
+      .section-head { display:flex; align-items:center; gap:3mm; margin-bottom:3mm; }
+      .num { display:grid; width:7mm; height:7mm; place-items:center; border-radius:2.2mm; color:#d76008; background:#fff0e3; font-size:7px; font-weight:850; }
+      h2 { margin:0; font-size:14px; letter-spacing:-.025em; }
+      h3 { margin:0 0 1mm; font-size:10px; }
+      p { margin:0; color:var(--soft); }
+      .problem { padding:4mm; border:1px solid var(--line); border-radius:4mm; }
+      .problem blockquote { margin:0 0 3mm; color:var(--ink); font-size:12px; font-weight:700; line-height:1.35; }
+      .problem p { font-size:8.5px; }
+      .jtbd { margin-top:3mm; padding:3mm 4mm; border-radius:3mm; color:#743114; background:#fff0e3; font-size:8px; }
+      .flow { display:grid; grid-template-columns:repeat(4,1fr); gap:2mm; }
+      .flow article { min-height:28mm; padding:3mm; border:1px solid var(--line); border-radius:3mm; }
+      .flow b { display:grid; width:5mm; height:5mm; place-items:center; margin-bottom:3mm; border-radius:50%; color:white; background:var(--orange); font-size:7px; }
+      .flow strong { display:block; font-size:8.5px; }
+      .flow span { display:block; margin-top:1.5mm; color:var(--soft); font-size:7px; line-height:1.35; }
+      .revenue { display:grid; grid-template-columns:repeat(4,1fr); gap:2mm; }
+      .revenue article { padding:3mm; border-radius:3mm; background:#f6f2ee; }
+      .revenue strong { display:block; color:var(--green); font-size:8px; }
+      .revenue span { display:block; margin-top:1mm; color:var(--soft); font-size:7px; }
+      .equation { display:flex; align-items:center; gap:2mm; margin-top:3mm; padding:3mm 4mm; border-radius:3mm; color:white; background:var(--ink); }
+      .equation strong { color:white; font-size:8px; }
+      .equation em { color:var(--orange); font-style:normal; font-weight:800; }
+      .stack { display:grid; gap:2mm; }
+      .stack article { display:grid; grid-template-columns:24mm 1fr; gap:2mm; padding:2.5mm 3mm; border:1px solid var(--line); border-radius:3mm; }
+      .stack strong { color:#d76008; font-size:7px; text-transform:uppercase; letter-spacing:.06em; }
+      .stack span { font-size:7.5px; }
+      .metrics { display:grid; grid-template-columns:1fr 1fr; gap:2mm; }
+      .north { grid-column:1/-1; padding:3mm; border-radius:3mm; color:white; background:var(--ink); }
+      .north small { color:#ffb377; font-size:7px; font-weight:800; text-transform:uppercase; }
+      .north strong { display:block; margin-top:1mm; font-size:10px; }
+      .metrics article:not(.north) { padding:2.5mm 3mm; border:1px solid var(--line); border-radius:3mm; }
+      .metrics article:not(.north) strong { display:block; font-size:8px; }
+      .metrics article:not(.north) span { display:block; margin-top:1mm; color:var(--soft); font-size:7px; }
+      .hypothesis { padding:4mm; border-left:2px solid var(--orange); background:#fff7f0; }
+      .hypothesis strong { display:block; margin-bottom:1.5mm; color:#d76008; font-size:7px; text-transform:uppercase; letter-spacing:.07em; }
+      .hypothesis p { color:var(--ink); font-size:8.5px; line-height:1.5; }
+      .guardrails { display:grid; grid-template-columns:repeat(4,1fr); gap:2mm; margin-top:3mm; }
+      .guardrails span { padding:2mm; border-radius:2mm; color:#315c48; background:#e4f4ec; font-size:6.7px; text-align:center; }
+      .footer { display:flex; align-items:flex-start; justify-content:space-between; gap:5mm; margin-top:6mm; padding-top:3mm; border-top:1px solid var(--line); color:#8d857e; font-size:6.5px; }
+      .footer p { max-width:105mm; font-size:6.5px; }
+      .footer div { display:flex; gap:3mm; }
+      @media(max-width:720px){ .sheet{min-height:auto}.top{grid-template-columns:1fr}.top-metrics{grid-template-columns:repeat(3,1fr);grid-template-rows:1fr;border-left:0}.metric{border-top:1px solid rgba(255,255,255,.12);border-left:1px solid rgba(255,255,255,.12)}.row{grid-template-columns:1fr}.flow,.revenue,.guardrails{grid-template-columns:1fr 1fr}.footer{flex-direction:column} }
+      @page { size:A4 portrait; margin:0; }
+      @media print { body{background:white}.toolbar{display:none}.sheet{width:210mm;height:297mm;min-height:0;margin:0;box-shadow:none;page-break-after:avoid;page-break-inside:avoid}.top{min-height:77mm}.body{padding-top:7mm} }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar"><a href="index.html#brief">← Detailed case study</a><button type="button" onclick="window.print()">Print / Save as PDF</button></div>
+    <main class="sheet">
+      <section class="top">
+        <div class="intro">
+          <span class="label">AI infusion for Swiggy · Product concept</span>
+          <h1>Swiggy Autopilot<br /><em>From meal intent to ready cart.</em></h1>
+          <p>A constraint-aware ordering agent that converts people, budget, dietary needs and deadline into three complete, live-validated carts—with an all-in price and one-tap review.</p>
+          <div class="thesis">Swiggy already helps users search. Autopilot closes the remaining gap: completing the decision confidently.</div>
+        </div>
+        <div class="top-metrics">
+          <div class="metric"><strong>19.2M</strong><span>Food-delivery MTUs · Q1 FY27</span></div>
+          <div class="metric"><strong>~70%</strong><span>Users transact less than monthly</span></div>
+          <div class="metric"><strong>₹9,490 Cr</strong><span>Quarterly food GOV · Q1 FY27</span></div>
+        </div>
+      </section>
+
+      <div class="body">
+        <div class="row">
+          <section class="section">
+            <div class="section-head"><span class="num">01</span><h2>Specific user problem</h2></div>
+            <div class="problem">
+              <blockquote>High-intent users know their constraints—but must still navigate restaurants, menus, offers, portions and fees to assemble a valid answer.</blockquote>
+              <p>Choice overload increases time and uncertainty. Scattered information creates product risk. A late change in payable total creates checkout hesitation.</p>
+              <div class="jtbd"><strong>JTBD:</strong> “When I’m hungry and tired, get me a dependable meal for my people, budget and time without making me research the marketplace.”</div>
+            </div>
+          </section>
+          <section class="section">
+            <div class="section-head"><span class="num">02</span><h2>Product experience</h2></div>
+            <div class="flow">
+              <article><b>1</b><strong>State intent</strong><span>Natural language + editable hard constraints.</span></article>
+              <article><b>2</b><strong>Build carts</strong><span>AI interprets; live systems validate.</span></article>
+              <article><b>3</b><strong>Choose trade-off</strong><span>Best fit, value or fastest—all-in.</span></article>
+              <article><b>4</b><strong>Save mission</strong><span>Repeat the need, not an outdated basket.</span></article>
+            </div>
+          </section>
+        </div>
+
+        <div class="row">
+          <section class="section">
+            <div class="section-head"><span class="num">03</span><h2>Revenue logic</h2></div>
+            <div class="revenue">
+              <article><strong>↑ Conversion</strong><span>Less browsing and hesitation.</span></article>
+              <article><strong>↑ Frequency</strong><span>Saved recurring occasions.</span></article>
+              <article><strong>↑ Healthy AOV</strong><span>Complete, portion-aware baskets.</span></article>
+              <article><strong>↑ Monetization</strong><span>Qualified ad traffic + density.</span></article>
+            </div>
+            <div class="equation"><strong>Food GOV = MTU × <em>order frequency</em> × AOV</strong><span>→ primary focus: incremental completed orders</span></div>
+          </section>
+          <section class="section">
+            <div class="section-head"><span class="num">04</span><h2>Why this needs AI</h2></div>
+            <div class="stack">
+              <article><strong>LLM</strong><span>Turns open-ended language into structured constraints.</span></article>
+              <article><strong>Retrieval + ranking</strong><span>Finds feasible combinations and ranks fit, reliability and economics.</span></article>
+              <article><strong>Deterministic validator</strong><span>Owns price, offers, inventory, item data and ETA.</span></article>
+              <article><strong>Explanation layer</strong><span>Makes the trade-off visible; never invents transactional facts.</span></article>
+            </div>
+          </section>
+        </div>
+
+        <div class="row">
+          <section class="section">
+            <div class="section-head"><span class="num">05</span><h2>Success measures</h2></div>
+            <div class="metrics">
+              <article class="north"><small>Business north star</small><strong>Incremental completed orders per eligible user per month</strong></article>
+              <article><strong>Experience</strong><span>Median time and taps to confident cart</span></article>
+              <article><strong>Funnel</strong><span>Mission → valid cart → checkout → order</span></article>
+              <article><strong>Economics</strong><span>AOV, take rate, contribution/order</span></article>
+              <article><strong>Retention</strong><span>30-day frequency and routine reuse</span></article>
+            </div>
+          </section>
+          <section class="section">
+            <div class="section-head"><span class="num">06</span><h2>Validation and guardrails</h2></div>
+            <div class="hypothesis"><strong>Experiment hypothesis</strong><p>Three complete, all-inclusive carts will reduce time-to-cart by ≥50% and improve order conversion by 3–5% relative, with neutral-or-better contribution margin and no increase in cancellations.</p></div>
+            <div class="guardrails"><span>Live price integrity</span><span>No allergy inference</span><span>Sponsored labels</span><span>Explicit confirmation</span></div>
+          </section>
+        </div>
+
+        <footer class="footer">
+          <p><strong>Scope:</strong> MVP starts with voluntary entry, one city, dinner missions, one restaurant per cart and no autonomous payment. Targets are hypotheses, not claimed results.</p>
+          <div><a href="https://www.swiggy.com/corporate/wp-content/uploads/2026/07/Covering-Letter_Letter-to-Shareholders-signed.pdf">Q1 FY27</a><a href="https://www.swiggy.com/corporate/press-release/swiggy-eyes-%E2%82%B910000-cr-adj-ebitda-by-fy31-backed-by-affordability-in-food-and-differentiated-instamart-strategy/">CMD 2026</a><a href="index.html#brief">Full case study</a></div>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>
